@@ -1,70 +1,33 @@
-# Getting Started with Create React App
+# 실습 완료 후 템플릿 (Google Firebase 배포)
+https://disney-plus-app-61c80.web.app/main
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+# 디즈니 플러스 앱 실습
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## 개요
+    디즈니 플러스 앱을 실제로 만들어 보며 리엑트 핵심기술을 습득
+## 주요 실습내용
+    * APIKey 생성 및 디즈니 백엔드 API 호출 후 가져오기
+    * Axios 라이브러리 사용하여 Back-End API 연결
+    * await 구문 활용하여 비동기 API 처리
+    * Styled Component 사용하여 컴포넌트 구성 (별도 install 필요)
+      - 상속 및 스타일 내부에 Props 활용
+    * React Route Dom 사용하여 컴포넌트 이동 제어 (별도 install 필요)
+    * Swiper 모듈사용하여 슬라이드 처리
+    * Google Firebase를 이용한 뒷단(인증, 백엔드, 모듈, 분석(애널리틱스) 등) 앱 구조 설계
+      - 로그인 시 인증관련 모듈 진행
+      - Firebsae CLI 를 이용하여 배포 관리
+    * LocalStorage 사용하여 새로고침 시에 로그인 정보가 유지되도록 고정
+## 보완 및 개선필요 사항
+    * 메인 오늘의 영화 영상 띄워주는 로직 개선 필요
+      - 버튼 클릭 대신 마우스 들어가서 3초뒤에 자동재생, 포커스 벗어나면 다시 토글
+      - 영상 Iframe 사이즈 조절 필요.
+      - 이미지 부분도 Ridius 조정, 모바일일때 폰트 조정필요함.
+    * 중복되는 컴포넌트 처리가 안되어있음.
+    * 디자인작업이 깔끔하지 못함
+    * 코딩 가독성이 너무 떨어지게 스타일지정 되어있음.
+    * 반응형 웹 페이지 구현이 안되어있음
+## 관련링크
+    * The Movie DB : https://www.themoviedb.org/
+    * Fireabse : https://firebase.google.com/?hl=ko
