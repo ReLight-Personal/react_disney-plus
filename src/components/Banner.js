@@ -40,6 +40,10 @@ const Banner = () => {
     flex-direction: column;
     width: 100%;
     height: 100vh;
+
+    @media (max-width: 768px) {
+      height: 60vh;
+    }
   `;
   const HomeContainer = styled.div`
     width: 100%;

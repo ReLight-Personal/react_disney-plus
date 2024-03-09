@@ -62,6 +62,10 @@ const Input = styled.input`
   color: white;
   padding: 5px;
   border: none;
+
+  @media screen and (max-width: 768px) {
+    margin: 10px;
+  }
 `;
 
 const DropDown = styled.div`
@@ -69,7 +73,7 @@ const DropDown = styled.div`
   top: 48px;
   right: 0px;
   width: 100%;
-  background: rgb(19, 19, 19)
+  background-color: rgb(19, 19, 19);
   border: 1px solid rgba(151, 151, 151, 0.34);
   border-radius:  4px;
   box-shadow: rgb(0 0 0 /50%) 0px 0px 18px 0px;
@@ -103,11 +107,16 @@ const UserImg = styled.img`
 `;
 
 const Nav = () => {
+
+  const initialUserData = localStorage.getItem("userData") ?
+    JSON.parse(localStorage.getItem("userData")) :
+    {};
+
   const [show, setShow] = useState(null);
   const [searchValue, setSearchValue] = useState("");
   const { pathname } = useLocation();
   const navigate = useNavigate();
-  const [userData, setUserData] = useState({});
+  const [userData, setUserData] = useState(initialUserData);
 
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
@@ -148,6 +157,7 @@ const Nav = () => {
     try {
       const result = await signInWithPopup(auth, provider);
       setUserData(result.user);
+      localStorage.setItem("userData", JSON.stringify(result.user));
     } catch (err) {
       console.log(err);
     }
@@ -188,7 +198,7 @@ const Nav = () => {
           <Logout>
             <UserImg src={userData.photoURL} alt={userData.displayName} />
             <DropDown>
-              <span onClick={handlLogout}>Sign out</span>
+              <span onClick={handlLogout}>Log out</span>
             </DropDown>
           </Logout>
         </div>

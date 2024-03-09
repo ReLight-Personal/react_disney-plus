@@ -77,8 +77,17 @@
 }
 
 @media (max-width: 768px) {
+  .banner {
+    overflow: "hidden";
+  }
+
+  .banner__title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+
   .banner__contents {
-    width: min-content !important;
+    width: 200px !important;
     padding-left: 2.3rem;
     margin-left: 0px !important;
   }
