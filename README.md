@@ -1,5 +1,7 @@
 # 실습 완료 후 템플릿 (Google Firebase 배포)
-https://disney-plus-app-61c80.web.app/main
+회원가입 구현안됨 (로그인 버튼 - google 로그인 팝업 - 메인페이지 까지 구현)
+
+https://disney-plus-app-61c80.web.app
 
 ---
 
